@@ -54,6 +54,8 @@
     <None Include="packages.config" />
     <Compile Include="ChapterOne.fs" />
     <Compile Include="ChapterOne.Tests.fs" />
+    <Compile Include="ChapterTwo.fs" />
+    <Compile Include="ChapterTwo.Tests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
