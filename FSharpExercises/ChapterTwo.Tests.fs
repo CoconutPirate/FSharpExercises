@@ -176,3 +176,21 @@ module ChapterTwoTests =
                 binomial 30 15
                 |> should equal 155117520
 
+// 2.9
+
+    // A. Declare function vat:int * float -> int, where
+    // vat(n,x) is obtained by increasing x by n percent
+
+        [<Test>]
+        let ``2.9.A: 100 with 23 vat should give 123 `` () =
+                vat 100 23.0f
+                |> should equal 123.0f
+
+    // B. Declare function unvat int * float -> float, where
+    // unvat n (vat n x) = x
+    
+        [<Test>]
+        let ``2.9.B: 123 with 23 vat should unvat to 100 `` () =
+                unvat 23.0f 123.0f
+                |> should equal 100.
+
