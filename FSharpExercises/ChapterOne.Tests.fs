@@ -9,17 +9,17 @@ module ChapterOneTests =
 // 1.1:
 // declare function g: int -> int where g(n) = n + 4
     [<Test>] 
-    let `` g(0) = 4 `` () =
+    let ``1.1: g(0) = 4 `` () =
             g 0
             |> should equal 4
 
     [<Test>]
-    let `` g(-5) = -1 `` () =
+    let ``1.1: g(-5) = -1 `` () =
             g -5
             |> should equal -1
 
     [<Test>]
-    let `` g(4) = 9 `` () =
+    let ``1.1: g(4) = 9 `` () =
             g 4
             |> should equal 9
 
@@ -27,12 +27,12 @@ module ChapterOneTests =
 // declare a function h: float * float -> float where h(x,y) = sqrt(x^2 + y^2)
 
     [<Test>]
-    let `` h(3,4) = 5 `` () =
+    let ``1.2: h(3,4) = 5 `` () =
         h(3.f,4.f)
         |> should equal 5.f
 
     [<Test>]
-    let `` h(5,12) = 13 `` () =
+    let ``1.2: h(5,12) = 13 `` () =
         h(5.f,12.f)
         |> should equal 13.f
 
@@ -41,17 +41,17 @@ module ChapterOneTests =
 // f(n) = 1 + 2 + ... + (n - 1) + n, for n>= 0
 
     [<Test>]
-    let `` f 4 = 10 `` () =
+    let ``1.3: f 4 = 10 `` () =
         f 4
         |> should equal 10
 
     [<Test>]
-    let `` f 0 = 0 `` () =
+    let ``1.3: f 0 = 0 `` () =
         f 0
         |> should equal 0
 
     [<Test>]
-    let `` f 1 = 1 `` () =
+    let ``1.3: f 1 = 1 `` () =
         f 1
         |> should equal 1
 
@@ -61,22 +61,22 @@ module ChapterOneTests =
 // Declare a function to compute Fn
     
     [<Test>]
-    let `` fib 0 = 0 `` () =
+    let ``1.4: fib 0 = 0 `` () =
         fib 0
         |> should equal [0]
 
     [<Test>]
-    let `` fib 1 = 0,1 `` () =
+    let ``1.4: fib 1 = 0,1 `` () =
         fib 1
         |> should equal [0;1]
 
     [<Test>]
-    let `` fib 2 = 0,1,1 `` () =
+    let ``1.4: fib 2 = 0,1,1 `` () =
         fib 2
         |> should equal [0;1;1]
 
     [<Test>]
-    let `` fib 5 = 0,1,1,2,3,5 `` () =
+    let ``1.4: fib 5 = 0,1,1,2,3,5 `` () =
         fib 5
         |> should equal [0;1;1;2;3;5]
 
@@ -85,12 +85,12 @@ module ChapterOneTests =
 // sum(m,n) = m + (m + 1) + (m + 2) + ... + (m + (n - 1)) + (m + n)
 
     [<Test>] 
-    let `` sum (2,3) = 14 `` () =
+    let ``1.5: sum (2,3) = 14 `` () =
         sum(2,3)
         |> should equal 14
 
     [<Test>]
-    let `` sum (3, 2) = 12 `` () =
+    let ``1.5: sum (3, 2) = 12 `` () =
         sum(3,2)
         |> should equal 12
     
