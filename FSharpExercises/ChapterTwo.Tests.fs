@@ -79,3 +79,21 @@ module ChapterTwoTests =
                occFromIth "aaaaa" 10 'a'
                |> should equal 0
 
+// 2.5
+// Declare function occInString: string*char -> int, where
+// occInString(str,ch) = the number of occurrences of character ch in the string str
+
+        [<Test>]
+        let ``2.5 should get 0 (not existing char) `` () =
+                occInString "abc" 'd'
+                |> should equal 0
+
+        [<Test>]
+        let ``2.5 should get 1 (only one occurence) `` () =
+                occInString "abc" 'a'
+                |> should equal 1
+
+        [<Test>]
+        let ``2.5 should get 3 (all characters in string) `` () =
+                occInString "aaaa" 'a'
+                |> should equal 4

@@ -16,3 +16,6 @@ module ChapterTwo =
 
     let occFromIth string index char =
         0
+
+    let occInString string char =
+        0
