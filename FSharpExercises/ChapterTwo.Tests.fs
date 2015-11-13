@@ -153,3 +153,26 @@ module ChapterTwoTests =
         let `` 2.7.C: next prime after 19 is 23 `` () =
                 nextPrime 19
                 |> should equal 23
+
+// 2.8
+// This figure is the first part of Pascal's triangle: http://tinyurl.com/opomz44
+// The entries of the triangle are called binomial coefficients.
+// http://tinyurl.com/qayuvda and
+// http://tinyurl.com/pm2w9p6 (well, I cannot do here anything else than posting those as images, sorry)
+// Declare function bin:int*int->int to compute binomial coefficients
+
+        [<Test>]
+        let `` 2.8: Binomial for n = 4, m = 2 equals 6 `` () =
+                binomial 4 2
+                |> should equal 6
+
+        [<Test>]
+        let `` 28: Biomial for n = 2, m = 1 equals 2 `` () =
+                binomial 2 1
+                |> should equal 2
+
+        [<Test>]
+        let `` 28: Binomial for n = 30, m = 15 equals 155 117 520`` () =
+                binomial 30 15
+                |> should equal 155117520
+

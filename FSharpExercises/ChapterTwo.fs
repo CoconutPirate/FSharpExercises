@@ -31,3 +31,13 @@ module ChapterTwo =
 
     let nextPrime n =
         0
+
+    let binomial n m =
+        0
+    
+    let vat n x =
+        0.f
+
+    let unvat n x =
+        0.f
+
