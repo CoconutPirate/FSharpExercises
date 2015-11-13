@@ -65,17 +65,17 @@ module ChapterTwoTests =
 
 
         [<Test>]
-        let ``2.4 should get 2 (indexes 3 and 4)`` () =
+        let ``2.4: should get 2 (indexes 3 and 4)`` () =
                occFromIth "aaaaa" 2 'a'
                |> should equal 3
 
         [<Test>]
-        let ``2.4 should get 0 (not existing char)`` () =
+        let ``2.4: should get 0 (not existing char)`` () =
                occFromIth "aaaaa" 1 'b'
                |> should equal 3
 
         [<Test>]
-        let ``2.4 should get 0 as starting index is bigger than string length `` () =
+        let ``2.4: should get 0 as starting index is bigger than string length `` () =
                occFromIth "aaaaa" 10 'a'
                |> should equal 0
 
@@ -84,17 +84,17 @@ module ChapterTwoTests =
 // occInString(str,ch) = the number of occurrences of character ch in the string str
 
         [<Test>]
-        let ``2.5 should get 0 (not existing char) `` () =
+        let ``2.5: should get 0 (not existing char) `` () =
                 occInString "abc" 'd'
                 |> should equal 0
 
         [<Test>]
-        let ``2.5 should get 1 (only one occurence) `` () =
+        let ``2.5: should get 1 (only one occurence) `` () =
                 occInString "abc" 'a'
                 |> should equal 1
 
         [<Test>]
-        let ``2.5 should get 3 (all characters in string) `` () =
+        let ``2.5: should get 3 (all characters in string) `` () =
                 occInString "aaaa" 'a'
                 |> should equal 4
 
@@ -103,11 +103,53 @@ module ChapterTwoTests =
 // notDivisible(d,n) is true if and only if d is NOT a divisor of n
 
         [<Test>]
-        let ``2.6 3 is not a divisor of 5 -> true `` () =
+        let ``2.6: 3 is not a divisor of 5 -> true `` () =
                 notDivisable 3 5
                 |> should be True
 
         [<Test>]
-        let ``2.6 4 is a divisor of 12 -> false `` () =
+        let ``2.6: 4 is a divisor of 12 -> false `` () =
                 notDivisable 4 12
                 |> should be False
+
+// 2.7
+
+    // A. Declare function test: int*int*int -> bool. The value of test (a,b,c) for a<=b is the truth value of:
+    // notDivisible (a,c) AND notDivisible (a+1,c) AND ... AND notDivisable (b,c)
+        
+        [<Test>]
+        let `` 2.7.A: test should return true for 2, 4 and 5 `` () =
+                test 2 4 5
+                |> should be True 
+
+        [<Test>]
+        let `` 2.7.A: test should return false for 2, 4 and 6 `` () =
+                test 2 4 6
+                |> should be False
+
+    // B. Declare function prime: int -> bool, where
+    // prime(n) = true, if and only if n is a prime number
+
+        [<Test>]
+        let `` 2.7.B: 19 is a prime `` () =
+                prime 19
+                |> should be True
+
+        [<Test>]
+        let `` 2.7.B: 20 is not a prime `` () =
+                prime 20
+                |> should be False
+
+
+    // C. Declare function nextPrime: int -> int, where
+    // nextPrime(n) is the smallest prime number > n
+
+        [<Test>]
+        let `` 2.7.C: next prime after 18 is 19 `` () =
+                nextPrime 18
+                |> should equal 19
+
+        [<Test>]
+        let `` 2.7.C: next prime after 19 is 23 `` () =
+                nextPrime 19
+                |> should equal 23

@@ -22,3 +22,12 @@ module ChapterTwo =
 
     let notDivisable divisor number =
         false
+
+    let test a b c =
+        false
+
+    let prime n =
+        false
+
+    let nextPrime n =
+        0
