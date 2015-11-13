@@ -13,3 +13,6 @@ module ChapterTwo =
 
     let notDivisible n m =
         false
+
+    let occFromIth string index char =
+        0

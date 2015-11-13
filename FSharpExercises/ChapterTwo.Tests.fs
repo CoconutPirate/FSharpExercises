@@ -56,3 +56,26 @@ module ChapterTwoTests =
         let ``2.3: should be false when char is not ith char of the string`` () =
                 isIthChar "abc" 1 'z'
                 |> should be False
+                
+
+// 2.4
+// Declare function occFromIth: string*int*char -> int, where
+// occFromIth(str,i,ch) = the number of occurences of character ch
+// in positions j in the string str with j >= i
+
+
+        [<Test>]
+        let ``2.4 should get 2 (indexes 3 and 4)`` () =
+               occFromIth "aaaaa" 2 'a'
+               |> should equal 3
+
+        [<Test>]
+        let ``2.4 should get 0 (not existing char)`` () =
+               occFromIth "aaaaa" 1 'b'
+               |> should equal 3
+
+        [<Test>]
+        let ``2.4 should get 0 as starting index is bigger than string length `` () =
+               occFromIth "aaaaa" 10 'a'
+               |> should equal 0
+
