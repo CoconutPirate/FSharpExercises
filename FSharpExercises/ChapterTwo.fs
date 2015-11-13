@@ -19,3 +19,6 @@ module ChapterTwo =
 
     let occInString string char =
         0
+
+    let notDivisable divisor number =
+        false

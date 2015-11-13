@@ -97,3 +97,17 @@ module ChapterTwoTests =
         let ``2.5 should get 3 (all characters in string) `` () =
                 occInString "aaaa" 'a'
                 |> should equal 4
+
+// 2.6
+// Declare function notDivisable: int*int -> bool, where
+// notDivisible(d,n) is true if and only if d is NOT a divisor of n
+
+        [<Test>]
+        let ``2.6 3 is not a divisor of 5 -> true `` () =
+                notDivisable 3 5
+                |> should be True
+
+        [<Test>]
+        let ``2.6 4 is a divisor of 12 -> false `` () =
+                notDivisable 4 12
+                |> should be False
