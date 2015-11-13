@@ -41,3 +41,5 @@ module ChapterTwo =
     let unvat n x =
         0.f
 
+    let min func number =
+        0

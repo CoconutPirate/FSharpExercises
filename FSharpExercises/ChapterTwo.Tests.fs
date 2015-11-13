@@ -194,3 +194,23 @@ module ChapterTwoTests =
                 unvat 23.0f 123.0f
                 |> should equal 100.
 
+
+// 2.10
+// Declare function min: (int -> int) -> int, where
+// the value of min(f) is the smallest natural number n where f(n) = 0 (if it exist)
+
+
+        [<Test>]
+        let ``2.10: y = x should give 0 `` () =
+                min (fun x-> x)
+                |> should equal 0
+
+        [<Test>]
+        let ``2.10: y = x - 5 should give 5 `` () =
+                min (fun x -> x - 5)
+                |> should equal 5
+
+        [<Test>]
+        let ``2.10: 2x^2 - 5x + 3 should give 1 `` () =
+                min (fun x-> 2*x*x - 5*x + 3)
+                |> should equal 1
